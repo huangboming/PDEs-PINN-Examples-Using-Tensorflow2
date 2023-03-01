@@ -68,9 +68,12 @@ $$
 
 The exact solution is: $u(x, t) = e^{-t}\sin(\pi x)$.
 
-PINN solution: 
+PINN solution v.s. the exact solution: 
+![pinn solution 2d](Diffusion%20Equation/pinn_solution_2d.png)
+![real solution 2d](Diffusion%20Equation/real_solution_2d.png)
 
-The exact solution:
+![pinn solution 3d](Diffusion%20Equation/pinn_solution_3d.png)
+![real solution 3d](Diffusion%20Equation/real_solution_3d.png)
 
 ---
 
