@@ -9,7 +9,8 @@ SA-PINN official implementation: https://github.com/levimcclenny/SA-PINNs
 Update: 
 
 - Add SA-PINN implementation for below examples:
-  - Poisson 2D example
+  - Poisson 2D
+  - Diffusion equation
   - Burgers equation
 - In SA-PINN implementation, I provide "save model" and "load model" function. Also, I add my trained models to the repo.
 
@@ -81,11 +82,11 @@ $$
 The exact solution is: $u(x, t) = e^{-t}\sin(\pi x)$.
 
 PINN solution v.s. the exact solution: 
-![pinn solution 2d](Diffusion%20Equation/pinn_solution_2d.png)
-![real solution 2d](Diffusion%20Equation/real_solution_2d.png)
+![pinn solution 2d](Diffusion%20Equation/outputs/pinn_solution_2d.png)
+![real solution 2d](Diffusion%20Equation/outputs/real_solution_2d.png)
 
-![pinn solution 3d](Diffusion%20Equation/pinn_solution_3d.png)
-![real solution 3d](Diffusion%20Equation/real_solution_3d.png)
+![pinn solution 3d](Diffusion%20Equation/outputs/pinn_solution_3d.png)
+![real solution 3d](Diffusion%20Equation/outputs/real_solution_3d.png)
 
 ---
 
