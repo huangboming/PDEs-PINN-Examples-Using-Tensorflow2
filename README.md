@@ -17,7 +17,7 @@ Update:
 
 ----
 
-### Poisson 1D example
+## Poisson 1D example
 
 Poisson 1D with boundary condition:
 
@@ -28,9 +28,7 @@ $$\left\{
     \end{array}
     \right.$$
 
-
 where $f(x) = \pi^2 \sin(\pi x)$.
-
 
 The exact solution is: $u(x) = \sin(\pi x)$
 
@@ -38,7 +36,7 @@ PINN solution and the exact solution: ![PINN_Poisson_1D](Poisson%201D/results_fo
 
 ---
 
-### Poisson 2D example
+## Poisson 2D example
 
 Poisson 2D with boundary condition:
 
@@ -51,7 +49,6 @@ $$
 \right.
 $$
 
-
 where $f(x, y) = 2\pi^2 \sin(\pi x)\sin(\pi y)$.
 
 The exact solution is: $u(x, y) = \sin(\pi x) \sin(\pi y)$
@@ -60,14 +57,13 @@ PINN solution: ![PINN_Poisson_2D](Poisson%202D/output/u_pred.png)
 
 The exact solution: ![Exact_Poisson_2D](Poisson%202D/output/u_exact.png)
 
----
+----
 
-### Diffusion Equation example
+## Diffusion Equation example
 
 (Example from Juan Diego Toscano's [Leaning PIML in Python](https://github.com/jdtoscano94/Learning-Python-Physics-Informed-Machine-Learning-PINNs-DeepONets), example 4: diffusion equation)
 
 Diffusion equation with initial condition and boundary conditions:
-
 
 $$
 \left\{ 
@@ -88,9 +84,9 @@ PINN solution v.s. the exact solution:
 ![pinn solution 3d](Diffusion%20Equation/outputs/pinn_solution_3d.png)
 ![real solution 3d](Diffusion%20Equation/outputs/real_solution_3d.png)
 
----
+----
 
-### Poisson 1D (Inverse Problem) example
+## Poisson 1D (Inverse Problem) example
 
 Poisson 1D (Inverse Problem) with boundary condition:
 
@@ -111,11 +107,11 @@ PINN solution:
 ![Poisson 1D results](Poisson%201D%20Inverse%20Problem/model_results.png)
 ![Poisson 1D lambda history](Poisson%201D%20Inverse%20Problem/lambda_progress.png)
 
---- 
+----
 
-### Burgers Equation example
+## Burgers Equation example
 
-I learned how to use PINN to solve burgers equation from [omniscientoctopus' code](https://github.com/omniscientoctopus/Physics-Informed-Neural-Networks/blob/main/TensorFlow/Burgers%20Equation/Burgers_Equation.ipynb). Much of my code is same as omniscientoctopus' code, but I add some comments and my ideas in my code
+I learned how to use PINN to solve burgers equation from [omniscientoctopus' code](https://github.com/omniscientoctopus/Physics-Informed-Neural-Networks/blob/main/TensorFlow/Burgers%20Equation/Burgers_Equation.ipynb). Much of my code is same as omniscientoctopus' code, but I add some comments and my ideas in my code.
 
 Here's omniscientoctopus' GitHub repo: https://github.com/omniscientoctopus/Physics-Informed-Neural-Networks
 
@@ -133,11 +129,40 @@ u(-1, t) = u(1, t) = 0
 where $u_0(x) = -\sin(\pi x)$, $\nu = \frac{0.01}{\pi}$
 
 PINN results: 
+
 ![real and pinn solution](Burgers%20Equation/outputs/real_and_pinn_solution.png)
 
 SA-PINN results:
+
 ![real solution](Burgers%20Equation/outputs/exact_solution_3d.png)
 ![sa-pinn solution](Burgers%20Equation/outputs/sa-pinn_solution_3d.png)
 ![real v.s sa-pinn solution](Burgers%20Equation/outputs/real_and_sa-pinn_solution.png)
 
+----
+
+## Allen-Cahn Equation(2D) example
+
+(Example from https://youtu.be/UTC6cccEEnM?t=267)
+
+Allen-Cahn equation for two-phase microstructrue evolution:
+
+$$\left\{\begin{array}{l}u_t - 0.00001u_{xx} + 5u^3 - 5u = 0 \quad x\in[-1,1], t \in [0,1] \newline
+u(x, 0) = x^2 \cos(\pi x) \newline
+u(-1, t) = u(1, t) \newline
+u_x(-1, t) = u_x(1, t)
+\end{array}
+\right.$$
+
+SA-PINN results:
+
+![real solution 2d](Allen-Cahn%202D/outputs/es2d.png)
+![sapinn solution 2d](Allen-Cahn%202D/outputs/sapinns2d.png)
+
+![real solution 3d](Allen-Cahn%202D/outputs/es3d.png)
+![sapinn solution 3d](Allen-Cahn%202D/outputs/sapinns3d.png)
+
+![t=0s](Allen-Cahn%202D/outputs/t00.png)
+![t=0.25s](Allen-Cahn%202D/outputs/t25.png)
+![t=0.50s](Allen-Cahn%202D/outputs/t50.png)
+![t=0.75s](Allen-Cahn%202D/outputs/t75.png)
 
