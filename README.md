@@ -41,7 +41,7 @@ PINN solution and the exact solution: ![PINN_Poisson_1D](Poisson%201D/results_fo
 Poisson 2D with boundary condition:
 
 $$
-\left\{ 
+\left\{
     \begin{array}{l}
     -\Delta u(x, y) = f(x, y) \quad \textrm{for } \, (x, y) \in \Omega = [-1, 1] \times [-1, 1] \newline
     u|_{\partial \Omega} = 0
@@ -66,7 +66,7 @@ The exact solution: ![Exact_Poisson_2D](Poisson%202D/output/u_exact.png)
 Diffusion equation with initial condition and boundary conditions:
 
 $$
-\left\{ 
+\left\{
     \begin{array}{l}
     u_t = u_{xx} - e^{-t}(\sin(\pi x) - \pi^2\sin(\pi x)) \quad x \in [-1, 1], t\in [0, 1] \newline
     u(x, 0) = \sin(\pi x) \newline
